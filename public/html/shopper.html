@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <title>Shopper Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+            header
+            {
+                font-family: Arial;
+                display: flex;
+                justify-content: space-around;
+                padding: 15px;
+                height: 100px;
+                align-items: center;
+                color: black;
+            }
+            .brand-title
+            {
+                font-size: 45px;
+                font-weight: bold;
+                color: black;
+            }
+            nav span {
+                margin-right: 15px;
+                font-size:25px;
+                font-style: Arial;
+                color: black;
+            }
+            .cart-count
+            {
+                background-color: red;
+                color:white;
+                padding: 3px;
+                width: 25px;
+                display: inline-block;
+                border-radius: 25px;
+                text-align: center;
+                font-size: 15px;
+            }
+            article {
+                background-color: black;
+                text-align: center;
+                color:white;
+                font-size: 20px;
+                padding: 20px;
+            }
+            .bi-lightning-fill {
+                color: gold;
+            }
+            section {
+                height: 100px;
+            }
+            footer{
+                text-align: center;
+                background-color: black;
+                font-size: 30px;
+                color:white;
+                padding: 100px;
+            }
+            button,input{
+                padding: 35px;
+                font-size: 20px;
+                color: black;
+                background-color: grey;
+            }
+            .foo {
+                display: grid;
+                grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+                padding-top: 100px;
+                background-color: black;
+                color:white;
+                font-family: Arial;
+            }
+            .footer-brand-name {
+                font-size: 40px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .footer-title {
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .footer-title~span {
+                display: block;
+                margin-bottom: 15px;
+                font-style: Arial;
+            }
+            div span{
+                color:grey;
+                font-size:25px;
+                
+            }
+            aside span {
+                margin-right: 5px;
+                font-size: 20px;
+                color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>
+                <span class="brand-title">Shopper.</span>
+            </div>
+            <div>
+                <nav>
+                    <span>Home</span>
+                    <span>Catalog</span>
+                    <span>Shop</span>
+                    <span>Pages</span>
+                    <span>Blog</span>
+                    <span>Docs</span>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <span class="bi bi-search"></span>
+                    <span class="bi bi-person"></span>
+                    <span class="bi bi-heart"></span>
+                    <span class="bi bi-cart3"><span class="cart-count">2</span></span>
+                </nav>
+            </div>
+        </header>
+        <article>
+            <span class="bi bi-lightning-fill"></span>
+            <span>HAPPY HOLIDAY DEALS ON EVERYTHING</span>
+            <span class="bi bi-lightning-fill"></span>
+        </article>
+        <section>
+
+        </section>
+        
+        <footer>
+            <div>
+                <h1>Want style Ideas and Treats?</h1>
+                <form>
+                    <input type="text" placeholder="Enter Email *">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+            <div class="foo">
+                <div>
+                    <div class="footer-brand-name">Shopper</div>
+                    <aside>
+                        <span class="bi bi-facebook"></span>
+                        <span class="bi bi-twitter"></span>
+                        <span class="bi bi-instagram"></span>
+                        <span class="bi bi-linkedin"></span>
+                        <span class="bi bi-youtube"></span>
+                    </aside>
+                </div>
+                <div>
+                    <div class="footer-title">SUPPORT</div>
+                    <span>Contact Us</span>
+                    <span>FAQs</span>
+                    <span>Size Guide</span>
+                    <span>Shipping & Returns</span>
+                </div>
+                <div>
+                    <div class="footer-title">SHOP</div>
+                    <span>Men's Shopping</span>
+                    <span>Women's Shopping</span>
+                    <span>Kids' Shopping</span>
+                    <span>Discounts</span>
+                </div>
+                <div>
+                    <div class="footer-title">COMPANY</div>
+                    <span>Our Story</span>
+                    <span>Careers</span>
+                    <span>Terms & Conditions</span>
+                    <span>Privacy & Cookie policy</span>
+                </div>
+                <div>
+                    <div class="footer-title">CONTACT</div>
+                    <span>1-202-555-0105</span>
+                    <span>1-202-555-0106</span>
+                    <span>help@shopper.com</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

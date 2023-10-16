@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Amazon Registration</title>
+    <style>
+    </style>
+</head>
+<body class="d-block justify-content-center align-content-center align-items-center ms-5">
+    <header class="justify-content-center align-content-center align-items-center">
+        <img class="p-1 w-25 h-25 ms-5" src="public/images/amazon-logo.jpg">
+    </header>
+    <form class=" justify-content-center align-items-center border border-dark ms-5 p-4 rounded w-25 mt-2">
+        <h2>Create Account</h2>
+        <div>
+            <label class="fw-bold form-label">Your Name</label>
+            <input class="form-control mb-3 input-group-text text-start" type="text" placeholder="First and Last name">
+        </div>
+        <div>
+            <label class="fw-bold form-label">Mobile Number</label>
+            <div class="d-flex">
+                <select class="w-auto me-3 h-auto input-group-text" value="IN +91">
+                    <option value="IN +91">IN +91</option>
+                </select>
+                <input class="form-control mb-3 input-group-text text-start" type="number" placeholder="Mobile number">
+            </div>
+        </div>
+        <div>
+            <label class="fw-bold form-label">Email (Optional)</label>
+            <input class="form-control mb-3 input-group-text text-start" type="text">
+        </div>
+        <div>
+            <label class="fw-bold form-label">Password</label>
+            <input class="form-control mb-3 input-group-text text-start" type="password" placeholder="At least 6 characters">
+            <div><span class="bi bi-info-lg text-primary"></span>Passwords must be at least 6 characters.</div>
+        </div>
+        <p>To verify your number, we will send you a text message with a temporary code. Message and data rates may apply.</p>
+        <button class="btn btn-warning btn btn-lg w-100">Continue</button>
+        <hr>
+        <p class="fw-bold">
+            Buying for work?
+        </p>
+        <a class="text-decoration-none" href="#">Create a free business account</a> 
+        <hr>
+        <p>Already have an account? <a href="#" class="text-decoration-none">Sign in</a><span class="bi bi-caret-right-fill text-primary"></span></p>
+        <br>
+        <p>By creating an account or logging in, you agree to Amazon’s <a href="#" class="text-decoration-none"> Conditions of Use</a> and <a href="#" class="text-decoration-none">Privacy Policy.</a></p>
+    </form>
+</body>
+</html>

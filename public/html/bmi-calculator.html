@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        function CalculateClick(){
+            var p = document.querySelector("p");
+            var male = document.getElementById("male");
+            var female = document.getElementById("female");
+            var a = document.getElementById("age");
+            var h = parseFloat(document.getElementById("height").value);
+            var w = parseFloat(document.getElementById("weight").value);
+            var value = document.getElementById("YourValue");
+            var bmi = w/(h**2);
+            document.getElementById("YourValue").innerHTML = bmi;
+            var value = document.getElementById("YourValue");
+            if(bmi>=1 && bmi<18.5){
+                value.style.marginLeft = "50px";
+            } else if(bmi>=18.5 && bmi<=24) {
+                value.style.marginLeft = "350px";
+            }else if(bmi>=25 && bmi<=29.9) {
+                value.style.marginLeft = "550px";
+            }else if(bmi>=30 && bmi<=35) {
+                value.style.marginLeft = "750px";
+            }
+            document.getElementById("lblResult").innerHTML = "Your EMI is <b>" + Math.round(bmi) + " </b> " 
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h2 class="text-center text-dark mt-4">BMI Calculator</h2>
+    <div class="row">
+        <div class="col bg-light p-4">
+            <div class="row">
+                <div class="col form-check">
+                    <h5><label class="form-check-label">Male</label>
+                    <input class="form-check-input" type="radio" id="male" name="gender" checked></h5>
+                </div>
+                <div class="col form-check">
+                    <h5><label class="form-check-label">Female</label>
+                    <input class="form-check-input" type="radio" id="female" name="gender"></h5>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h5>Enter Age <input type="number" id="age"></h5>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h5>Weight in kilograms <input type="number" id="weight"></h5>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h5>Height in meters <input type="number" id="height"></h5>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-end">
+                    <h5><button onclick="CalculateClick()" class="btn btn-primary btn-lg">Calculate</button></h5>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="col w-75 bg-light p-4 ms-3">
+            <div class="progress h-25">
+                <div class="progress-bar bg-secondary" style="width: 25%;">
+                    <h5>Underweight</h5>
+                </div>
+                <div class="progress-bar bg-success ms-1" style="width: 25%;">
+                    <h5>Normal</h5>
+                </div>
+                <div class="progress-bar bg-warning ms-1" style="width: 25%;">
+                    <h5>Overweight</h5>
+                </div>
+                <div class="progress-bar bg-danger ms-1" style="width: 25%;">
+                    <h5>Obsese</h5>
+                </div>
+
+            </div>
+            <div id="YourValue">
+                <span class="bi bi-caret-down-fill"></span>
+                <div>You</div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <span id="lblResult" class="h3"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
